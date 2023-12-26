@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block card_container %}
+    <div class="row container ms-auto me-auto">
+        {% for meal in meals %}
+            <div class="col-md-3 mt-2 mb-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{meal.strMealThumb}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{meal.strMeal}}</h5>
+                      <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta fugiat fuga vitae recusandae nesciunt eaque nostrum, obcaecati laboriosam.</p>
+                    </div>
+                  </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock card_container %}
